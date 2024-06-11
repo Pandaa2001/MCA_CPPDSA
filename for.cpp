@@ -23,7 +23,7 @@ using namespace std;
 // }
 
 int main() {
-    int num = -3;
+    int num = -33;
     string result = (num == 0) ? "Zero" : (num > 0) ? "Positive" : "Negative";
     cout<<result;
 }
