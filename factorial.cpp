@@ -1,17 +1,27 @@
 #include <iostream>
 using namespace std;
 
-void factorial(){
-    int n;
-    cout<<"Enter the number whose factorial is needed: ";
-    cin>>n;
+int factorial(int num){
+    
     int fact = 1;
-    for(int i = 1; i <= n; i++){
+    for(int i = 1; i <= num; i++){
         fact = fact * i;
     }
-    cout<<"Factorial of "<<n<<" is: "<<fact;
+    return fact;
+}
+
+int ncr(int n, int r){
+    int numerator = factorial(n);
+    int diff = n - r;
+    int denominator = factorial(r) * factorial(diff);
+
+    int result = numerator / denominator ;
+    cout<<result;
+
 }
 
 int main(){
-    factorial();
+    int n,r;
+    cin>>n>>r;
+    ncr(n,r);
 }
