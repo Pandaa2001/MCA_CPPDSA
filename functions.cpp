@@ -1,17 +1,13 @@
 #include <iostream>
 using namespace std;
 
-int add(){
-        int num1, num2,sum;
-        cout<<"Numbers are:";
-        cin>>num1>>num2;
-        sum = num1 + num2;
-        cout<<"Sum:"<<sum;
-        return sum;
+int add(int num1 = 4, int num2 = 9){
+        return num1 + num2;
     }
 
 int main(){
-    add();
+    int sum = add();
+    cout<<sum;
 }
 
 //defining a function is neccessary before main and you can declare the function afterwards too.
@@ -22,3 +18,7 @@ int main(){
 //int main(){
 //number()
 //}
+
+//default parameter starts from right and goes to left
+//string print(string name, int age, int height = 5) -- correct
+//string print(string name, int age = 23, int height) -- wrong
